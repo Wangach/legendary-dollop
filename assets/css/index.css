@@ -1,59 +1,75 @@
+@font-face{
+	font-family: Rye;
+	src: url(../gfonts/Rye-Regular.ttf);
+  }
+  @font-face{
+	font-family: Berkshire;
+	src: url(../gfonts/BerkshireSwash-Regular.ttf);
+  }
+  @font-face{
+	font-family: CodyR;
+	src: url(../gfonts/Codystar-Regular.ttf);
+  }
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
-@import url('https://fonts.googleapis.com/css?family=Lobster');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
 
-
-
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body{
-background: url(https://store.hp.com/wcsstore/hpusstore/Treatment/category/laptops/images/laptops-fea2_2.png) no-repeat center;
-  background-size: cover;
-text-align: center;
-font-family: sans-serif;
-font-weight: 100;
+	padding: 3rem;
 }
+.myHeader {
+	position: relative;
+	height: 95vh;
+	background-image: linear-gradient(to right, rgba(212, 7, 51, 0.877), rgba(212, 7, 51, 0.67)),
+	 url(../img/bgs/bg1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
-body h1{
-  color: #C71585;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
 }
-body p{
-  font-family:Merriweather;
-  color:#800080;
+.count-wrap {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-12rem, -2rem);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"faoo faoo"
+	"secoo secoo";
 }
-body label{
-  color:#00FFFF;
-  font-family:Lobster;
-}
-body i{
-  color:#FF00FF;
-}
-body h2{
-  color:#FFD700;
-}
+.count-title {
+	color: rgb(221, 153, 94);
+	grid-area: faoo;
+	font-family: Berkshire;
 
-#clockdiv{
+}
+#count-clock{
 	font-family: sans-serif;
 	color: #fff;
 	display: inline-block;
 	font-weight: 100;
 	text-align: center;
-	font-size: 30px;
+	font-size: 2.2rem;
+	grid-area: secoo;
 }
 
-#clockdiv > div{
+#count-clock > div{
+	font-family: CodyR;
 	padding: 10px;
 	border-radius: 3px;
-	background: #00BF96;
+	background: rgba(0, 0, 0, .75);
 	display: inline-block;
 }
 
-#clockdiv div > span{
+#count-clock div > span{
 	padding: 15px;
 	border-radius: 3px;
-	background: #00816A;
+	background:rgba(0, 0, 0, .5);
 	display: inline-block;
 }
 
@@ -61,10 +77,27 @@ body h2{
 	padding-top: 5px;
 	font-size: 16px;
 }
-
-
 .love h3{
 color:white;
 font-size:34px;
 }
 
+@media (max-width: 768px) {
+	.count-title > h1 {
+		font-size: 1.6rem;
+		font-family: Rye;
+
+	}
+	.count-wrap {
+		width: 80vw;
+	}
+	#count-clock > div{
+		padding: 5px;
+		border-radius: 5px;
+		background: rgba(0, 0, 0, .75);
+	}
+	#count-clock div > span{
+		padding: 1.5px;
+		border-radius: 1.5px;
+	}
+  }

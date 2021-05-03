@@ -37,5 +37,5 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = ('07 October 2021 00:00:00 GMT+0300');
-initializeClock('clockdiv', deadline);
+var deadline = ('07 October 2021 00:00:00 GMT+0300');   //Enter The Date and Time You Prefer
+initializeClock('count-clock', deadline);
